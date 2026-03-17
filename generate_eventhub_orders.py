@@ -26,6 +26,7 @@ ORDER_TYPES = ["dine_in", "takeaway", "delivery"]
 PAYMENT_METHODS = ["cash", "card", "wallet"]
 ORDER_STATUSES = ["pending", "confirmed", "preparing", "ready", "delivered"]
 
+
 def generate_order():
     order_date = datetime.utcnow()
     restaurant_id = random.choice(RESTAURANTS)

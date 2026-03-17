@@ -5,9 +5,8 @@ import time
 from datetime import datetime
 from azure.eventhub import EventHubProducerClient, EventData
 import pandas as pd
-
 from dotenv import load_dotenv
-load_dotenv()   
+load_dotenv()
 
 EVENTHUB_CONNECTION_STRING = os.getenv("EVENTHUB_CONNECTION_STRING")
 EVENTHUB_NAME = os.getenv("EVENTHUB_NAME")

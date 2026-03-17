@@ -11,14 +11,11 @@ load_dotenv()
 
 EVENTHUB_CONNECTION_STRING = os.getenv("EVENTHUB_CONNECTION_STRING")
 EVENTHUB_NAME = os.getenv("EVENTHUB_NAME")
-
-
 # Load data
 script_dir = os.path.dirname(os.path.abspath(__file__))
 df_restaurants = pd.read_csv(os.path.join(script_dir, "data", "restaurants.csv"))
 df_customers = pd.read_csv(os.path.join(script_dir, "data", "customers.csv"))
 df_menu_items = pd.read_csv(os.path.join(script_dir, "data", "menu_items.csv"))
-
 RESTAURANTS = df_restaurants['restaurant_id'].tolist()
 CUSTOMERS = df_customers['customer_id'].tolist()
 MENU_BY_RESTAURANT = df_menu_items.groupby('restaurant_id').apply(
